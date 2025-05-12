@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: #f5f5f5;
+    padding-top: 80px;
+}
+
+header {
+    width: 100%;
+    background-color: #6a0dad;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.fondo {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+
+.navegacion ul {
+    display: flex;
+    list-style: none;
+}
+
+.navegacion ul li {
+    margin-left: 15px;
+    position: relative;
+}
+
+.navegacion ul li a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: color 0.3s ease;
+}
+
+.navegacion ul li a:hover {
+    color: #fbc02d;
+}
+
+.submenu .hijos {
+    display: none;
+    position: absolute;
+    background: #333;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.submenu:hover .hijos {
+    display: block;
+}
+
+.hijos li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    transition: background 0.3s;
+}
+
+.hijos li a:hover {
+    background: #444;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+
+#h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+#carrito {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0;
+    list-style-type: none;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#carrito li {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#carrito li button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#carrito li button:hover {
+    background-color: #d32f2f;
+}
+
+#total {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.boton-seguir-comprando {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+
+.boton-seguir-comprando:hover {
+    background-color: #45a049;
+}
+
+.boton-finalizar-compra {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.boton-finalizar-compra:hover {
+    background-color: #1976D2;
+}
+
+@media (max-width: 768px) {
+    header .navegacion ul {
+        flex-direction: column;
+    }
+
+    header .busqueda input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #carrito {
+        width: 90%;
+    }
+
+    #total {
+        width: 90%;
+    }
+
+    .boton-seguir-comprando, .boton-finalizar-compra {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+}
